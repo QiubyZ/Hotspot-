@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Monokai Modern Color Palette -->
+    <color name="monokai_bg">#1E1F1C</color>
+    <color name="monokai_card">#272822</color>
+    <color name="monokai_card_header">#19181A</color>
+    <color name="monokai_card_stroke">#3E3D32</color>
+    <color name="monokai_input_bg">#3E3D32</color>
+
+    <color name="monokai_text_primary">#F8F8F2</color>
+    <color name="monokai_text_secondary">#CFCEBE</color>
+    <color name="monokai_text_muted">#75715E</color>
+
+    <!-- Monokai Accents -->
+    <color name="monokai_pink">#F92672</color>
+    <color name="monokai_green">#A6E22E</color>
+    <color name="monokai_cyan">#66D9EF</color>
+    <color name="monokai_orange">#FD971F</color>
+    <color name="monokai_yellow">#E6DB74</color>
+    <color name="monokai_purple">#AE81FF</color>
+</resources>

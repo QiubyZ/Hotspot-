@@ -1,162 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:background="@color/monokai_bg"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hotspot Manager"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Memuat..."
-            android:textSize="13sp" />
+        android:padding="18dp">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            app:cardBackgroundColor="@color/monokai_card_header"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="10dp"
+            app:strokeColor="@color/monokai_card_stroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Hotspot Manager"
+                    android:textColor="@color/monokai_text_primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Memuat..."
+                    android:textColor="@color/monokai_text_secondary"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/monokai_card_stroke"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Live monitoring"
+                        android:textColor="@color/monokai_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/monokai_card"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/monokai_card_stroke"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kontrol jaringan"
+                    android:textColor="@color/monokai_text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="Interface"
+                    android:textColor="@color/monokai_yellow"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/etNdc"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="52dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
+                        android:background="@color/monokai_input_bg"
                         android:hint="ndc iface (wlan1)"
                         android:inputType="text"
-                        android:text="wlan1" />
+                        android:paddingHorizontal="14dp"
+                        android:text="wlan1"
+                        android:textColor="@color/monokai_text_primary"
+                        android:textColorHint="@color/monokai_text_muted" />
 
                     <EditText
                         android:id="@+id/etTc"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="8dp"
                         android:layout_weight="1"
+                        android:background="@color/monokai_input_bg"
                         android:hint="tc iface (ap0)"
                         android:inputType="text"
-                        android:text="ap0" />
+                        android:paddingHorizontal="14dp"
+                        android:text="ap0"
+                        android:textColor="@color/monokai_text_primary"
+                        android:textColorHint="@color/monokai_text_muted" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:text="Kuota global interface (ndc)"
+                    android:textColor="@color/monokai_yellow"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/etGlobalMb"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="52dp"
                         android:layout_weight="1"
+                        android:background="@color/monokai_input_bg"
                         android:hint="MB"
                         android:inputType="number"
-                        android:text="500" />
+                        android:paddingHorizontal="14dp"
+                        android:text="500"
+                        android:textColor="@color/monokai_text_primary"
+                        android:textColorHint="@color/monokai_text_muted" />
 
                     <Button
                         android:id="@+id/btnSetQuota"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Set" />
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/monokai_pink"
+                        android:text="Set"
+                        android:textAllCaps="false" />
 
                     <Button
                         android:id="@+id/btnRemoveQuota"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hapus" />
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/monokai_orange"
+                        android:text="Hapus"
+                        android:textAllCaps="false" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:text="Limit semua user (tc tbf, Mbit)"
+                    android:textColor="@color/monokai_yellow"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/etTbf"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="52dp"
                         android:layout_weight="1"
+                        android:background="@color/monokai_input_bg"
                         android:hint="Mbit"
                         android:inputType="number"
-                        android:text="1" />
+                        android:paddingHorizontal="14dp"
+                        android:text="1"
+                        android:textColor="@color/monokai_text_primary"
+                        android:textColorHint="@color/monokai_text_muted" />
 
                     <Button
                         android:id="@+id/btnTbf"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Terapkan" />
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/monokai_green"
+                        android:text="Terapkan"
+                        android:textAllCaps="false"
+                        android:textColor="#1E1F1C" />
 
                     <Button
                         android:id="@+id/btnClearTc"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Reset TC" />
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/monokai_pink"
+                        android:text="Reset TC"
+                        android:textAllCaps="false" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btnRefresh"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Refresh daftar user" />
+                    android:layout_height="52dp"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="@color/monokai_purple"
+                    android:text="Refresh daftar user"
+                    android:textAllCaps="false" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/tvCount"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="User terkoneksi: 0"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User terkoneksi: 0"
+                android:textColor="@color/monokai_text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvUsers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:nestedScrollingEnabled="false" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

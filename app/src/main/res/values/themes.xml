@@ -1,3 +1,11 @@
 <resources>
-    <style name="Theme.HotspotManager" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.HotspotManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/monokai_pink</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/monokai_green</item>
+        <item name="colorSurface">@color/monokai_card</item>
+        <item name="android:windowBackground">@color/monokai_bg</item>
+        <item name="android:statusBarColor">@color/monokai_card_header</item>
+        <item name="android:navigationBarColor">@color/monokai_bg</item>
+    </style>
 </resources>

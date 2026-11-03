@@ -58,7 +58,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.VH> {
         h.ip.setText(u.ip);
         h.mac.setText(u.mac + "  (" + u.dev + ")");
         h.state.setText(u.blocked ? "DIBLOKIR" : "Aktif (" + u.state + ")");
-        h.state.setTextColor(u.blocked ? Color.parseColor("#C62828") : Color.parseColor("#2E7D32"));
+        h.state.setTextColor(u.blocked ? Color.parseColor("#F92672") : Color.parseColor("#A6E22E"));
         h.speed.setText("Kecepatan: " + (u.speedKbps > 0 ? u.speedKbps + " kbit/s" : "tanpa limit"));
         if (u.quotaBytes > 0) {
             h.quota.setText("Kuota: " + fmt(u.usedBytes) + " terpakai / " + fmt(u.quotaBytes)
