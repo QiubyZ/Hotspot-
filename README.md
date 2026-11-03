@@ -14,6 +14,10 @@ Aplikasi ini menggunakan tema **Monokai Modern** (Dark Mode khas Monokai) dengan
 
 ## ✨ Fitur Utama
 
+- 🔘 **Quick Settings Tile (Panel Setelan Cepat)**:
+  - **Tekan Biasa (Tap)**: Menyalakan atau mematikan Hotspot secara langsung dari panel Quick Settings menggunakan Android API yang disesuaikan untuk `minSdk 21` hingga `targetSdk 35`.
+  - **Tekan Lama (Long Press)**: Membuka aplikasi **Hotspot Manager** secara langsung.
+
 - 🔍 **Monitoring Real-Time (Auto-Refresh 5 Detik)**:
   - Deteksi otomatis perangkat yang terhubung melalui `ip neigh show`.
   - Menampilkan Alamat IP, Alamat MAC, nama Interface (`wlan1`, `ap0`), serta status koneksi.
@@ -38,7 +42,7 @@ Aplikasi ini menggunakan tema **Monokai Modern** (Dark Mode khas Monokai) dengan
 
 ## 🛠️ Persyaratan Sistem
 
-- **OS Android**: Android 7.0 (API 24) atau yang lebih baru.
+- **OS Android**: Android 5.0 (API 21) atau yang lebih baru (Fitur Quick Settings Tile aktif pada Android 7.0+ API 24+).
 - **Akses Root**: Superuser (`su` / Magisk / KernelSU / APatch) wajib diizinkan untuk aplikasi.
 - **Interface Tethering**: Dukungan interface tethering standar Android (contoh: `wlan1`, `ap0`).
 
@@ -52,10 +56,12 @@ Aplikasi ini menggunakan tema **Monokai Modern** (Dark Mode khas Monokai) dengan
 git clone https://github.com/QiubyZ/Hotspot-.git
 cd Hotspot-
 
-# Build Debug APK
-./gradlew assembleDebug
+# Build Debug & Release APK
+./gradlew assembleDebug assembleRelease
 ```
-Hasil file APK berada di: `app/build/outputs/apk/debug/app-debug.apk`
+Hasil file APK berada di:
+- Debug: `app/build/outputs/apk/debug/app-debug.apk`
+- Release: `app/build/outputs/apk/release/app-release.apk`
 
 ---
 
@@ -63,12 +69,12 @@ Hasil file APK berada di: `app/build/outputs/apk/debug/app-debug.apk`
 
 Project ini telah dikonfigurasi dengan **GitHub Actions Workflow**:
 - **Push ke `main`**: Otomatis menjalankan build untuk APK Debug & Release dan mengunggahnya sebagai *Build Artifacts*.
-- **Push Tag Versi (`v1.0`, `v1.1`, dst.)**: Otomatis mempublikasikan rilis baru di halaman **GitHub Releases** beserta file APK yang siap di-download.
+- **Push Tag Versi (`v1.0`, `v1.0.0-pre1`, dst.)**: Otomatis mempublikasikan rilis/pra-rilis baru di halaman **GitHub Releases** beserta file APK bertanda tangan resmi **QiubyZhukhi**.
 
 ```bash
-# Contoh membuat tag rilis baru
-git tag v1.0
-git push origin v1.0
+# Contoh membuat tag pra-rilis baru
+git tag v1.0.0-pre1
+git push origin v1.0.0-pre1
 ```
 
 ---
