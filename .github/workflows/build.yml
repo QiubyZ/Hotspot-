@@ -60,6 +60,7 @@ jobs:
         with:
           files: dist/*.apk
           name: Hotspot Manager ${{ github.ref_name }}
+          prerelease: ${{ contains(github.ref_name, 'pre') || contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') || contains(github.ref_name, 'rc') || contains(github.ref_name, 'prarelease') }}
           body: |
             ## 📱 Hotspot Manager ${{ github.ref_name }}
             Release APK ini ditandatangani secara resmi oleh **QiubyZhukhi**.
